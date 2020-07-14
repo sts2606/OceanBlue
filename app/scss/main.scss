@@ -1,0 +1,811 @@
+@import "_reset.scss";
+@import "_font.scss";
+
+body {
+	font-family: "Circe", sans-serif;
+	margin: 0;
+	max-height: 100vh;
+}
+
+@keyframes trambling-animation {
+
+	0%,
+	50%,
+	100% {
+		transform: translateX(5px);
+		// -webkit-transform: rotate(0deg);
+		// -moz-transform: rotate(0deg);
+		// -o-transform: rotate(0deg);
+		// -ms-transform: rotate(0deg);
+	}
+
+	10%,
+	30% {
+		transform: translateX(-5px);
+		// -webkit-transform: rotate(-10deg);
+		// -moz-transform: rotate(-10deg);
+		// -o-transform: rotate(-10deg);
+		// -ms-transform: rotate(-10deg);
+	}
+
+	20%,
+	40% {
+		transform: translateX(15px);
+		// -webkit-transform: rotate(10deg);
+		// -moz-transform: rotate(10deg);
+		// -o-transform: rotate(10deg);
+		// -ms-transform: rotate(10deg);
+	}
+}
+
+@media screen and (max-width: 479px) {
+	.header {
+		font-style: normal;
+		font-weight: normal;
+		color: #FFF;
+
+		&__img-block {
+			width: 100vw;
+			height: 279px;
+			background-image: url('../images/dest/headermobile.png');
+			background-repeat: no-repeat;
+			background-position: top;
+			background-attachment: fixed;
+		}
+
+		&__logo-block {
+			position: relative;
+			top: -15px;
+			background: linear-gradient(239.51deg, #30BEF2 13.56%, #3E77F4 70.3%);
+			box-shadow: 0px 20px 80px rgba(17, 58, 150, 0.3);
+			border-radius: 20px 20px 0px 0px;
+		}
+
+		&__logo {
+			width: 100vw;
+			height: 40px;
+			background-image: url('../images/dest/logomobilepng.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			padding-top: 40px;
+			padding-bottom: 30px;
+		}
+
+		&__text-block {
+			padding: 30px 16px 60px 16px;
+		}
+
+		&__title_top {
+			font-size: 20px;
+			line-height: 29px;
+			line-height: 29px;
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 112px;
+				right: 16px;
+				width: 100%/2;
+				height: 2px;
+				background-color: #FFF;
+			}
+		}
+
+		&__title_bottom {
+			font-weight: bold;
+			font-size: 40px;
+			line-height: 59px;
+			padding-bottom: 5px;
+		}
+
+		&__text {
+			padding-top: 5px;
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+
+	.main {
+		overflow: hidden;
+	}
+
+	.services {
+		padding-top: 75px;
+		padding-bottom: 75px + 82px;
+		padding-right: 16px;
+		padding-left: 16px;
+		color: #343638;
+
+		&__title {
+			padding-top: 25px;
+			padding-bottom: 25px;
+			font-weight: bold;
+			font-size: 35px;
+			line-height: 52px;
+			text-align: center;
+		}
+
+		&__item {
+			padding-top: 25px;
+			padding-bottom: 25px;
+			text-align: center;
+
+			&-title {
+				font-weight: bold;
+				font-size: 20px;
+				line-height: 29px;
+				margin-bottom: 16px;
+			}
+
+			&-text {
+				font-size: 16px;
+				line-height: 24px;
+			}
+		}
+
+		&__item-logo {
+			margin-bottom: 24px;
+		}
+	}
+
+	.reason-block {
+		padding-top: 25px;
+		padding-bottom: 75px;
+		position: relative;
+		color: #343638;
+
+		&__image-block {
+			width: 100vw;
+			height: 311.48px;
+			background: #C4C4C4;
+			background-image: url('../images/dest/whyusmobole.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 0px 0px 0px 100px;
+			transform: matrix(-1, 0, 0, 1, 0, 0);
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 100%;
+				left: 80%;
+				width: 88px;
+				height: 88px;
+				border: 22px solid #56C287;
+				border-radius: 50% 50% 50% 50%;
+				transform: rotate(-45deg);
+				transform: translateY(-50%);
+			}
+		}
+
+		&__blue-block {
+			display: block;
+			position: absolute;
+			width: 254.67px;
+			height: 254.67px;
+			background: linear-gradient(235.64deg, #30BEF2 13.56%, #3E77F4 70.3%);
+			box-shadow: 0px 20px 80px rgba(17, 58, 150, 0.3);
+			border-radius: 50px;
+			transform: rotate(60deg);
+			left: 150px;
+			top: -40px;
+			z-index: -1;
+		}
+
+		&__text-block {
+			padding-right: 16px;
+			padding-left: 16px;
+		}
+
+		&__title {
+			margin-top: 95px;
+			font-weight: bold;
+			font-size: 35px;
+			line-height: 52px;
+			text-align: center;
+		}
+
+		&__text {
+			margin-top: 40px;
+			font-size: 16px;
+			line-height: 24px;
+			padding-bottom: 25px;
+		}
+	}
+
+	.contact {
+		background: #F0F2F5;
+		padding-top: 100px;
+		padding-bottom: 100px;
+		color: #343638;
+
+		&__image-block {
+			position: relative;
+		}
+
+		&__image {
+			display: block;
+			width: 100vw;
+			height: 431.5px;
+			background: #F0F2F5;
+			background-image: url('../images/dest/contactmobile.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 0px 0px 0px 100px;
+			position: relative;
+			z-index: 100;
+
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: 98%;
+				right: 90%;
+				width: 44px;
+				height: 44px;
+				border: 14px solid #FF6C08;
+				border-radius: 50% 50% 50% 50%;
+				transform: rotate(-45deg);
+				transform: translateY(50%);
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: -24px;
+				left: 58px;
+				width: 10px;
+				height: 10px;
+				background: linear-gradient(238.4deg, #FF9C59 13.56%, #FF6C08 70.3%);
+				border-radius: 50%;
+			}
+		}
+
+		&__blue-block {
+			display: block;
+			position: absolute;
+			width: 254.67px;
+			height: 254.67px;
+			background: linear-gradient(235.64deg, #30BEF2 13.56%, #3E77F4 70.3%);
+			box-shadow: 0px 20px 80px rgba(17, 58, 150, 0.3);
+			border-radius: 50px;
+			transform: rotate(60deg);
+			left: -50px;
+			top: 200px;
+		}
+
+		&__text-block {
+			padding-left: 16px;
+			padding-right: 16px;
+			text-align: center;
+		}
+
+		&__title {
+			padding-top: 85px;
+			padding-bottom: 12px;
+			font-weight: bold;
+			font-size: 35px;
+			line-height: 52px;
+		}
+
+		&__text {
+			padding-top: 12px;
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+		&__form {
+			margin-top: 22px;
+			display: flex;
+			flex-direction: column;
+
+			&_item {
+				display: block;
+				margin-top: 8px;
+			}
+
+			&_input {
+				background: #FFFFFF;
+				box-shadow: 0px 20px 30px rgba(17, 58, 150, 0.15);
+				border-radius: 4px;
+				border: transparent;
+				font-size: 16px;
+				line-height: 24px;
+				height: 64px;
+				color: #91979C;
+				padding-left: 16px;
+
+				&:focus {
+					outline: 0;
+					outline-offset: 0;
+					border-bottom: 1px solid #3E77F4;
+					color: #343638;
+				}
+			}
+
+			&_textarea {
+				padding-top: 16px;
+				height: 128px;
+
+				&:focus {
+					height: 128px;
+				}
+			}
+
+			&_button {
+				display: block;
+				height: 64px;
+				font-weight: bold;
+				font-size: 20px;
+				line-height: 29px;
+				text-align: center;
+				text-transform: capitalize;
+				color: #FFFFFF;
+				background: linear-gradient(195.93deg, #30BEF2 13.56%, #3E77F4 70.3%);
+				box-shadow: 0px 20px 80px rgba(17, 58, 150, 0.3);
+				border-radius: 4px;
+				border: transparent;
+
+				&:hover {
+					background: #3E77F4;
+					transition: 0.3;
+				}
+
+				&:focus {
+					outline: 0;
+					outline-offset: 0;
+				}
+			}
+		}
+	}
+
+	.footer {
+		background: #7C8DA7;
+		font-size: 16px;
+		line-height: 24px;
+		color: #FFFFFF;
+		text-align: center;
+
+		&__first-part {
+			padding-top: 30px;
+			padding-bottom: 8px;
+		}
+
+		&__second-part {
+			padding-bottom: 30px;
+			padding-top: 8px;
+		}
+	}
+
+}
+
+@media screen and (min-width: 480px) {
+
+	body {
+		width: 100%;
+		max-width: 1920px;
+		overflow-x: hidden;
+		margin: 0 auto;
+	}
+
+	.container {
+		padding-left: 200px;
+		max-width: 100%;
+	}
+
+	.header {
+		margin: 0 auto;
+		font-style: normal;
+		font-weight: normal;
+		color: #FFF;
+
+		max-width: 100%;
+		overflow: hidden;
+		position: relative;
+
+
+		&__img-block {
+			position: relative;
+			border-radius: 50px 50px 50px 50px;
+			left: 12%;
+			width: 1615px;
+			height: 714px;
+			background-image: url('../images/dest/header.png');
+			background-repeat: no-repeat;
+			background-position: right center;
+			z-index: -30;
+			background-attachment: fixed;
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: -150px;
+				right: -200px;
+				left: 500px;
+				bottom: -150px;
+				border-radius: 200px 50px 50px 180px;
+				border: 150px solid white;
+				transform: skewX(30deg);
+				z-index: -20;
+			}
+
+		}
+
+		&__logo-block {
+			position: relative;
+			left: 0;
+			height: 714px;
+			top: -714px;
+			width: 35%;
+			padding-left: 200px;
+
+			&::before {
+				content: "";
+				position: absolute;
+				display: block;
+				left: -113%;
+				height: 714px;
+				top: 0;
+				width: 1615px;
+				background: linear-gradient(239.51deg, #30BEF2 13.56%, #3E77F4 70.3%);
+				box-shadow: 0px 20px 80px rgba(17, 58, 150, 0.3);
+				border-radius: 20px 20px 50px 50px;
+				transform: skewX(30deg);
+				z-index: -10;
+			}
+		}
+
+		&__logo {
+			width: 100vw;
+			height: 53px;
+			background-image: url('../images/dest/logo.png');
+			background-repeat: no-repeat;
+			background-position: left;
+			padding-top: 57px;
+			padding-bottom: 60px;
+		}
+
+		&__text-block {
+			padding-top: 80px;
+		}
+
+		&__title_top {
+			font-size: 30px;
+			line-height: 44px;
+			position: relative;
+			width: 471px;
+			overflow: hidden;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 150px;
+				right: 16px;
+				width: 323px;
+				height: 2px;
+				background-color: #FFF;
+			}
+		}
+
+		&__title_bottom {
+			font-weight: bold;
+			font-size: 60px;
+			line-height: 88px;
+			padding-bottom: 3px;
+		}
+
+		&__text {
+			padding-top: 4px;
+			font-size: 20px;
+			line-height: 29px;
+		}
+	}
+
+	.main {
+		position: relative;
+		top: -715px;
+	}
+
+	.services {
+		padding-top: 105px;
+		padding-bottom: 100px;
+		padding-right: 328px;
+		padding-left: 328px;
+		color: #343638;
+
+		&__title {
+			padding-top: 25px;
+			padding-bottom: 25px;
+			font-weight: bold;
+			font-size: 50px;
+			line-height: 74px;
+			text-align: center;
+		}
+
+		&__list {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__item {
+			padding-right: 69px;
+			padding-top: 25px;
+			text-align: center;
+
+			&:last-child {
+				padding-right: 0;
+			}
+
+			&-title {
+				font-weight: bold;
+				font-size: 20px;
+				line-height: 29px;
+				margin-bottom: 16px;
+			}
+
+			&-text {
+				font-style: normal;
+				font-weight: normal;
+				font-size: 16px;
+				line-height: 24px;
+			}
+		}
+
+		&__item-logo {
+			margin-bottom: 24px;
+		}
+	}
+
+	.reason-block {
+		padding-top: 100px;
+		padding-bottom: 200px;
+		position: relative;
+		color: #343638;
+		display: flex;
+		flex-direction: row-reverse;
+		padding-left: 24%;
+		padding-right: 20%;
+		align-items: center;
+		justify-content: space-between;
+
+		&__image-block {
+			margin-left: 70px;
+			width: 566px;
+			height: 477px;
+			background: #C4C4C4;
+			background-image: url('../images/dest/whyus.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 0px 0px 0px 100px;
+			transform: matrix(-1, 0, 0, 1, 0, 0);
+			position: relative;
+
+		}
+
+		&__blue-block {
+			display: block;
+			position: absolute;
+			width: 390px;
+			height: 390px;
+			background: linear-gradient(235.64deg, #30BEF2 13.56%, #3E77F4 70.3%);
+			box-shadow: 0px 20px 80px rgba(17, 58, 150, 0.3);
+			border-radius: 50px;
+			transform: rotate(60deg);
+			left: 1014px;
+			top: 15px;
+			z-index: -1;
+		}
+
+		&__green-block {
+			position: absolute;
+			top: 575px;
+			left: 710px;
+			width: 88px;
+			height: 88px;
+			border: 22px solid #56C287;
+			border-radius: 50% 50% 50% 50%;
+			transform: rotate(-45deg);
+			transform: translateY(-50%);
+
+			&:hover {
+				position: absolute;
+				top: 575px-66px;
+				animation: 1.2s ease-in-out 0s normal none infinite running trambling-animation;
+			}
+		}
+
+		&__text-block {
+			width: 438px;
+		}
+
+		&__title {
+			font-weight: bold;
+			font-size: 50px;
+			line-height: 74px;
+		}
+
+		&__text {
+			margin-top: 24px;
+			font-size: 20px;
+			line-height: 29px;
+		}
+	}
+
+	.contact {
+		background: #F0F2F5;
+		padding-top: 150px;
+		padding-bottom: 150px;
+		padding-left: 19%;
+		padding-right: 23%;
+		color: #343638;
+		display: flex;
+
+		&__image {
+			display: block;
+			width: 566px;
+			height: 564px;
+			margin-right: 70px;
+			background: #F0F2F5;
+			background-image: url('../images/dest/contact.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 0px 0px 0px 100px;
+			position: relative;
+			z-index: 10;
+		}
+
+		&__blue-block {
+			display: block;
+			position: absolute;
+			width: 390px;
+			height: 390px;
+			background: linear-gradient(235.64deg, #30BEF2 13.56%, #3E77F4 70.3%);
+			box-shadow: 0px 20px 80px rgba(17, 58, 150, 0.3);
+			border-radius: 50px;
+			transform: rotate(60deg);
+			left: 200px;
+			bottom: 87px;
+		}
+
+		&__large-yellow-block {
+			display: block;
+			position: absolute;
+			bottom: 705px;
+			right: 1170px;
+			width: 85px;
+			height: 85px;
+			border: 14px solid #FF6C08;
+			border-radius: 50% 50% 50% 50%;
+			transform: rotate(-45deg);
+			transform: translateY(50%);
+			z-index: 20;
+
+			&:hover {
+				position: absolute;
+				bottom: 705px - 56px;
+				animation: 1.2s ease-in-out 0s normal none infinite running trambling-animation;
+			}
+		}
+
+		&__small-yellow-block {
+			display: block;
+			position: absolute;
+			bottom: 752px;
+			right: 1145px;
+			width: 16px;
+			height: 16px;
+			background: linear-gradient(238.4deg, #FF9C59 13.56%, #FF6C08 70.3%);
+			border-radius: 50%;
+
+			&:hover {
+				position: absolute;
+				animation: 1.2s ease-in-out 0s normal none infinite running trambling-animation;
+			}
+		}
+
+		&__text-block {
+			width: 438px;
+		}
+
+		&__title {
+			padding-bottom: 12px;
+			font-weight: bold;
+			font-size: 50px;
+		}
+
+		&__text {
+			padding-top: 12px;
+			font-size: 20px;
+			line-height: 29px;
+			text-align: justify;
+		}
+
+		&__form {
+			display: flex;
+			flex-direction: column;
+
+			&_item {
+				display: block;
+				margin-top: 8px;
+			}
+
+			&_input {
+				background: #FFFFFF;
+				box-shadow: 0px 20px 30px rgba(17, 58, 150, 0.15);
+				border-radius: 4px;
+				border: 1px solid transparent;
+				font-size: 16px;
+				line-height: 24px;
+				height: 64px;
+				color: #91979C;
+				padding-left: 16px;
+
+				&:focus {
+					outline: 0;
+					outline-offset: 0;
+					border-bottom: 1px solid #3E77F4;
+					color: #343638;
+				}
+			}
+
+			&_textarea {
+				padding-top: 16px;
+				height: 128px;
+
+				&:focus {
+					height: 128px;
+				}
+			}
+
+			&_button {
+				display: block;
+				height: 64px;
+				font-weight: bold;
+				font-size: 20px;
+				line-height: 29px;
+				text-align: center;
+				text-transform: capitalize;
+				color: #FFFFFF;
+				background: linear-gradient(195.93deg, #30BEF2 13.56%, #3E77F4 70.3%);
+				box-shadow: 0px 20px 80px rgba(17, 58, 150, 0.3);
+				border-radius: 4px;
+				border: transparent;
+				cursor: pointer;
+				transition: 0, 3s;
+
+				&:hover {
+					background: #3E77F4;
+				}
+
+				&:focus {
+					outline: 0;
+					outline-offset: 0;
+				}
+			}
+		}
+	}
+
+	// input:focus {
+
+	// }
+
+	.footer {
+		position: absolute;
+		top: 3054px;
+		left: 0;
+		right: 0;
+		background: #7C8DA7;
+		font-size: 16px;
+		line-height: 24px;
+		color: #FFFFFF;
+		display: flex;
+		justify-content: space-between;
+		padding: 18px 200px;
+
+
+	}
+
+}
